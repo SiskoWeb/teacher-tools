@@ -209,8 +209,8 @@ const WheelComponent = ({
     <div id='wheel'>
       <canvas
         id='canvas'
-        width='400'
-        height='300'
+        width='1000'
+        height='800'
         style={{
           pointerEvents: isFinished && isOnlyOnce ? 'none' : 'auto'
         }}
