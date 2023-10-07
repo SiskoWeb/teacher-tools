@@ -4,6 +4,7 @@ import WheelComponent from "@/app/lib/WheelComponent ";
 
 export default function Spinner() {
   const [winner1, setWinner1] = useState<string>("");
+  const [segmentsData, setSegmentsData] = useState<string[]>([]);
 
   const segments = [
     "better luck next time",
@@ -50,8 +51,10 @@ export default function Spinner() {
     console.log(winner);
     setWinner1(winner);
   };
+
+  const getData = (): void => {};
   return (
-    <div className="w-[70%] flex justify-center items-center">
+    <div className="w-full flex justify-center items-start ">
       <WheelComponent
         segments={segments}
         segColors={segColors}
@@ -60,11 +63,11 @@ export default function Spinner() {
         contrastColor="white"
         buttonText="Spin"
         isOnlyOnce={false}
-        size={200}
+        // size={200}
         upDuration={100}
         downDuration={100}
         fontFamily="Arial"
-        winningSegment={undefined}
+        winningSegment={winner1}
       />
     </div>
   );
